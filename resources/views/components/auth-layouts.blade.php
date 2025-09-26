@@ -8,7 +8,7 @@
     <title>{{ $title ?? 'Auth' }}</title>
 </head>
 
-<body class="flex mx-auto p-4 font-medium text-sky-500">
+<body class="flex font-medium text-sky-500">
     @if (session('success'))
         <script>
             Swal.fire({
