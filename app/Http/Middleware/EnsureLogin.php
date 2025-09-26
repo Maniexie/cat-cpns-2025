@@ -16,11 +16,12 @@ class EnsureLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!in_array(Auth::user()->status, ['admin', 'user'])) {
-            abort(403, 'Access denied');
-            return response('Forbidden | Anda dilarang akses halaman ini .', 403);
-        }
 
+        if (!Auth::check()) {
+            return response()->view('errors.403', [], 403);
+
+
+        }
         return $next($request);
     }
 }

@@ -1,14 +1,25 @@
-{{-- resources/views/errors/403.blade.php --}}
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>403 Forbidden</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>403 - Akses Dilarang</h1>
-    <p>Anda tidak memiliki hak akses untuk membuka halaman ini.</p>
+    <div class="d-flex justify-content-center align-items-center vh-100 text-center">
+        <div class="container">
+            <h3> <span class="text-danger fw-bold"> 403 - Forbidden </span> | Silahkan login terlebih dahulu</h3>
+            <h2>Anda tidak memiliki hak akses untuk membuka halaman ini 😒😒😒.</h2>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
