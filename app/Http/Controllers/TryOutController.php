@@ -11,7 +11,7 @@ class TryOutController extends Controller
      */
     public function index()
     {
-        return view("tryout.index");
+        return view('tryout.index');
     }
 
     /**

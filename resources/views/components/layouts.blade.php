@@ -113,7 +113,7 @@
                 <h1 class="text-xl font-bold text-gray-800 dark:text-white">{{ $title ?? 'null header' }}</h1>
                 <div>
                     <span class="text-gray-600 dark:text-gray-300">Hallo,{{ Auth::user()->name ?? 'Guest' }}</span>
-                    <form action="#" method="POST" class="inline">
+                    <form action="/logout" method="POST" class="inline">
                         @csrf
                         <button class="ml-3 bg-red-500 text-white px-3 py-1 rounded-md">Logout</button>
                     </form>
