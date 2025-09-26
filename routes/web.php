@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Middleware\EnsureLogin;
+use App\Http\Controllers\BankSoalController;
+use App\Http\Middleware\EnsureLogin; // Role / Status for Admin & User
+use App\Http\Middleware\EnsureUserRole; // Role / Status for Admin
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -34,4 +36,10 @@ Route::middleware(EnsureLogin::class)->group(function () {
     Route::get('/tryout', function () {
         return view('tryout.index');
     });
+
+});
+
+
+Route::middleware(EnsureUserRole::class)->group(function () {
+    Route::get('/create-soal', [BankSoalController::class, 'showFormCreateSoal']);
 });

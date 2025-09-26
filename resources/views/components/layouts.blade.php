@@ -61,6 +61,44 @@
                     </li>
 
 
+                    {{-- Bank Soal --}}
+                    <li x-data="{ openMenu: false }">
+                        <button @click="openMenu = !openMenu"
+                            class="flex items-center justify-between w-full p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer ">
+                            <div class="flex items-center cursor-pointer">
+                                <span x-show="open" class="cursor-pointer">Bank Soal</span>
+                            </div>
+                            {{-- Arrow icon --}}
+                            <svg :class="{ 'rotate-90': openMenu }" xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        {{-- Submenu --}}
+                        <ul x-show="openMenu" x-collapse class="pl-6 mt-1 space-y-1 transition-all duration-1000">
+                            <li>
+                                <a href="/create-soal"
+                                    class="block p-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                    Buat Soal
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/orders/completed"
+                                    class="block p-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                    Completed Orders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/orders/cancelled"
+                                    class="block p-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                    Cancelled Orders
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     {{-- Orders Dropdown --}}
                     <li x-data="{ openMenu: false }">
                         <button @click="openMenu = !openMenu"
