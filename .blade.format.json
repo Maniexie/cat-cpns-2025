@@ -1,0 +1,6 @@
+{
+    "indentInnerHtml": true,
+    "wrapAttributes": "auto",
+    "sortHtmlAttributes": "custom",
+    "customHtmlAttributesOrder": ["id", "class", "name", ".+", "data-.+"]
+}
