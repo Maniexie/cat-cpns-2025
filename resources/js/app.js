@@ -1,3 +1,4 @@
+import "./libs/trix";
 import "./bootstrap";
 import Swal from "sweetalert2";
 

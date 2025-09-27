@@ -86,9 +86,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/orders/completed"
+                                <a href="/category-soal"
                                     class="block p-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700">
-                                    Completed Orders
+                                    Kategori Soal
                                 </a>
                             </li>
                             <li>

@@ -10,11 +10,9 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('paket_kategori', function (Blueprint $table) {
+        Schema::create('paket_tryout', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('paket_soal_id')->constrained('paket_soal')->onDelete('cascade');
-            $table->foreignId('kategori_soal_id')->constrained('kategori_soal')->onDelete('cascade');
-            $table->integer('jumlah_soal'); // misal 10
+            $table->string('nama_paket_tryout');
             $table->timestamps();
         });
     }
@@ -24,6 +22,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('paket_kategori');
+        Schema::dropIfExists('paket_tryout');
     }
 };

@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TryOut;
 use Illuminate\Http\Request;
 
 class TryOutController extends Controller
 {
+    public function mulaiTryOut(Request $request)
+    {
+        $tryoutId = TryOut::findOrFail($request->id);
+        return view('tryout.mulai_tryout', compact('tryoutId'));
+    }
     /**
      * Display a listing of the resource.
      */

@@ -12,8 +12,8 @@ return new class extends Migration {
     {
         Schema::create('paket_soal_detail', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('paket_id')->constrained('paket_soal')->onDelete('cascade');
-            $table->foreignId('soal_id')->constrained('bank_soal')->onDelete('cascade');
+            $table->foreignId('paket_soal_id')->constrained('paket_soal')->onDelete('cascade');
+            $table->foreignId('bank_soal_id')->constrained('bank_soal')->onDelete('cascade');
             $table->timestamps();
         });
     }
