@@ -47,9 +47,11 @@ Route::middleware(EnsureLogin::class)->group(function () {
 
     // Route::get('/tryout/paket-tryout/mulai/{id}', [TryOutController::class, 'mulaiTryOut']);
     Route::get('/tryout/paket-tryout/{id}/mulai', [PaketTryoutController::class, 'mulaiTryout']);
-
+    // Route::post('/tryout/simpan-jawaban', [TryoutController::class, 'simpanJawaban']);
     // isi paket tryout
     Route::get('/tryout/isi-paket-tryout/{id}', [PaketTryoutController::class, 'showIsiPaketTryout']);
+
+    Route::post('/tryout/simpan-hasil', [TryoutController::class, 'simpanHasil']);
 
 
 });

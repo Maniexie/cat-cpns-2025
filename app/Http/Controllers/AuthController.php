@@ -30,6 +30,7 @@ class AuthController extends Controller
 
             return redirect()->intended('/dashboard'); // Redirect to intended URL or dashboard
         }
+        $request->session()->put('user_id', Auth::user()->id);
 
         session()->flash('error', 'Invalid credentials.');
 

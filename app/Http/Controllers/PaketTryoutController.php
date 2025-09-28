@@ -53,9 +53,23 @@ class PaketTryoutController extends Controller
         return view("tryout.isi_paket_tryout", compact("bankSoal"));
     }
 
-    public function mulaiTryout($id)
+    public function mulaiTryout(Request $request, $id)
     {
-        $bankSoal = BankSoal::where("paket_tryout_id", $id)->get()->all();
-        return view("tryout.mulai_tryout", compact("bankSoal"));
+        // Ambil paket tryout
+        $paketTryout = PaketTryout::findOrFail($id);
+
+        // Ambil semua soal dalam paket
+        $bankSoal = BankSoal::where('paket_tryout_id', $id)->get();
+        echo 'query' . $bankSoal;
+
+
+
+        return view('tryout.mulai_tryout', [
+            'paketTryout' => $paketTryout,
+            'bankSoal' => $bankSoal,
+            'totalSoal' => $bankSoal->count(),
+            'durasi' => 90 // menit, bisa ambil dari tabel paket
+        ]);
     }
+
 }
